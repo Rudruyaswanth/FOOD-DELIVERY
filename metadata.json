@@ -1,0 +1,6 @@
+{
+  "name": "Leafline Studio",
+  "description": "Local MongoDB database workbench, document explorer, and aggregation studio for mongodb://localhost:27017/.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

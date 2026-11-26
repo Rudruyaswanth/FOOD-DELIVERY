@@ -1,11 +1,35 @@
-<div align="center">
+# Leafline — Online Food Delivery & MongoDB Studio
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Leafline is a full-stack bistro food delivery application powered by a dual-mode MongoDB backend (MongoDB Atlas / local `mongod` via the official `mongodb` Node.js driver, plus a persistent Local Sandbox JSON store).
 
-  <h1>Built with AI Studio</h2>
+## Key Features
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+- **Customer Ordering (`Order`)**: Browse partner kitchens, filter by dietary tags (`Vegetarian`, `Vegan`, `Gluten-Free`, `Spicy`), customize portions and add-ons, and check out in Indian Rupees (`₹`).
+- **Live Order Tracking (`Track`)**: 4-stage real-time progress tracker (`Confirmed` -> `Preparing` -> `Out for Delivery` -> `Delivered`) with 5-second automatic sync and itemized receipts.
+- **Kitchen Operations (`Kitchen`)**: Advance live preparation tickets across stages and toggle dish stock (`In Stock` / `Sold Out`) directly in MongoDB.
+- **MongoDB Studio (`MongoDB Studio`)**: Full document browser and CRUD editor, multi-stage aggregation pipeline builder, schema field analyzer, index manager, interactive `mongosh` runner, driver code snippets, and one-click starter schema seeding.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Architecture
 
-</div>
+See [ARCHITECTURE.md](./ARCHITECTURE.md) for the complete technical architecture, data models, REST API reference, and dual-mode persistence design.
+
+## Quick Start
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Configure environment variables (optional; runs in Local Sandbox automatically if omitted):
+   ```bash
+   cp .env.example .env
+   # Set MONGODB_URI to your MongoDB Atlas SRV or local mongodb://localhost:27017/ URI
+   ```
+3. Start development server on port `3000`:
+   ```bash
+   npm run dev
+   ```
+4. Build and run in production:
+   ```bash
+   npm run build
+   npm start
+   ```
